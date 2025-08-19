@@ -3,23 +3,127 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
-    <!-- <style>
-        /* Target the specific section with ID */
-        .elementor-element-d3b515f,
-        .elementor-element-d3b515f > .elementor-container,
-        .elementor-element-d3b515f > .elementor-widget-wrap,
-        .elementor-element-d3b515f > .elementor-column,
-        .elementor-element-d3b515f > .elementor-widget-container {
-            background: transparent !important;
-            background-color: transparent !important;
+    <style>
+        .pricing-section {
+            background: linear-gradient(180deg, #1f1c3b 0%, #1a2a49 100%);
+            padding: 60px 0;
+            color: white;
+            min-width: 1400px;
+            margin-bottom: 50px;
+            border-radius: 20px;
         }
-        .elementor-element-d3b515f .elementor-icon-wrapper,
-        .elementor-element-d3b515f .elementor-icon,
-        .elementor-element-d3b515f .elementor-icon-wrapper > * {
-            background: inherit !important;
-            background-color: inherit !important;
+
+        .pricing-container {
+            margin: 0 auto;
+            padding: 0 15px;
+            max-width: 1200px;
+            border-radius: 5px;
         }
-    </style> -->
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .pricing-header h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .pricing-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 5px;
+            margin: 0 auto 40px;
+        }
+
+        .pricing-tab {
+            padding: 10px 12px;
+            cursor: pointer;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            text-align: center;
+        }
+
+        .pricing-tab.active {
+            background: #d81b60;
+            color: white;
+        }
+
+        .pricing-content {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+            max-width: 1100px;
+        }
+
+        .pricing-panel {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            position: absolute;
+            transition: transform 0.5s ease;
+        }
+
+        .pricing-panel.active {
+            position: relative;
+        }
+
+        .pricing-panel:not(.active) {
+            transform: translateX(100%);
+        }
+
+        .pricing-features {
+            margin: 20px 0;
+        }
+
+        .pricing-feature {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .pricing-feature i {
+            color: #d81b60;
+            margin-right: 10px;
+        }
+
+        .pricing-footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .price-tag {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d81b60;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-tabs {
+                max-width: 300px;
+            }
+
+            .pricing-tab {
+                padding: 10px 20px;
+            }
+        }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="SmartBooks - Nigeria's premier offline digital textbook series for Primary 1 to SS3. Interactive learning with 15-30 subjects, voice tutoring, games, and AI assistance. Works without internet. Perfect for students, parents, teachers, and schools.">
@@ -1720,14 +1824,14 @@
 
                     <section
                         class="elementor-section elementor-top-section elementor-element elementor-element-d3b515f elementor-section-boxed elementor-section-height-default elementor-section-height-default force-no-bg"
-                        data-id="d3b515f" data-element_type="section" style="all: unset !important; background: transparent !important; background-color: transparent !important; background-image: none !important; position: relative !important; display: block !important;">
+                        data-id="d3b515f" data-element_type="section"
+                        style="all: unset !important; background: transparent !important; background-color: transparent !important; background-image: none !important; position: relative !important; display: block !important;">
                         <div class="elementor-container elementor-column-gap-default" style="margin-top: 50px;">
                             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f61ccf2"
                                 data-id="f61ccf2" data-element_type="column" style="background: none !important;">
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-8a9928e elementor-absolute elementor-hidden-mobile elementor-widget__width-initial icon-moving-rotate elementor-view-default elementor-widget elementor-widget-icon"
-                                        data-id="8a9928e" data-element_type="widget"
-                                        data-widget_type="icon.default">
+                                        data-id="8a9928e" data-element_type="widget" data-widget_type="icon.default">
                                         <div class="elementor-widget-container">
                                             <div class="elementor-icon-wrapper">
                                                 <div class="elementor-icon">
@@ -1745,7 +1849,8 @@
                                         <div class="elementor-widget-container">
                                             <div class="rt-hover-heading ">
                                                 <h2 class="rt-title-heading">
-                                                    <span class="rt-highlight-txt text-dark">Flexible, Transparent, and Affordable
+                                                    <span class="rt-highlight-txt text-dark">Flexible, Transparent, and
+                                                        Affordable
                                                         <span class="rt-underline-txt">
                                                             <svg width="208" height="16" viewBox="0 0 208 16"
                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1760,13 +1865,14 @@
                                                 <div class="elementor-element elementor-element-b509810 elementor-widget elementor-widget-text-editor"
                                                     data-id="b509810" data-element_type="widget"
                                                     data-widget_type="text-editor.default">
-                                                    <div class="elementor-widget-container text-dark mt-3 text-center mb-0">
+                                                    <div
+                                                        class="elementor-widget-container text-dark mt-3 text-center mb-0">
                                                         We believe quality education should
                                                         be accessible to everyone. That’s why we offer multiple
                                                         licensing
                                                         models to fit the needs of individuals, schools, and education
                                                         partners.</div>
-                                                        <hr />
+                                                    <hr />
                                                 </div>
                                                 <!-- <div class="elementor-element elementor-element-bc671bc elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
                                                     data-id="bc671bc" data-element_type="widget"
@@ -1782,7 +1888,7 @@
                                         </div>
                                     </div>
 
-                                    <section
+                                    <!-- <section
                                         class="mt-0 elementor-section elementor-inner-section elementor-element elementor-element-20a0e5f all-column-gap main-work-box elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                         data-id="20a0e5f" data-element_type="section">
                                         <div class="elementor-container elementor-column-gap-default">
@@ -1838,7 +1944,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- <div class="elementor-element elementor-element-2a59d81 elementor-widget elementor-widget-radiant-custom-button"
+                                                    <div class="elementor-element elementor-element-2a59d81 elementor-widget elementor-widget-radiant-custom-button"
                                                         data-id="2a59d81" data-element_type="widget"
                                                         data-widget_type="radiant-custom-button.default">
                                                         <div class="elementor-widget-container">
@@ -1855,7 +1961,7 @@
                                                                     </svg></div>
                                                             </div>
                                                         </div>
-                                                    </div> -->
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-745ae1e sub-work-box text-muted"
@@ -1898,7 +2004,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- <div class="elementor-element elementor-element-c67a7ab elementor-widget elementor-widget-radiant-custom-button"
+                                                    <div class="elementor-element elementor-element-c67a7ab elementor-widget elementor-widget-radiant-custom-button"
                                                         data-id="c67a7ab" data-element_type="widget"
                                                         data-widget_type="radiant-custom-button.default">
                                                         <div class="elementor-widget-container">
@@ -1915,10 +2021,10 @@
                                                                     </svg></div>
                                                             </div>
                                                         </div>
-                                                    </div> -->
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <!-- <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-6cc17bb sub-work-box"
+                                            <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-6cc17bb sub-work-box"
                                                 data-id="6cc17bb" data-element_type="column"
                                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                 <div class="elementor-widget-wrap elementor-element-populated">
@@ -1980,8 +2086,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div> -->
-                                            <!-- <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-b8e33e6 sub-work-box"
+                                            </div>
+                                            <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-b8e33e6 sub-work-box"
                                                 data-id="b8e33e6" data-element_type="column">
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-46398e5 elementor-widget__width-initial m-0 elementor-view-default elementor-widget elementor-widget-icon"
@@ -2047,7 +2153,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div> -->
+                                            </div>
                                         </div>
 
                                         <p class="elementor-image-box-description text-dark text-center">
@@ -2055,6 +2161,41 @@
                                                 assessment tools and technical support.</b>
                                         </p>
                                         <hr />
+                                    </section> -->
+
+                                    <section class="pricing-section elementor-section elementor-inner-section">
+                                        <div class="pricing-container elementor-container elementor-column-gap-default
+
+                                            <div class="pricing-tabs">
+                                                <div class="pricing-tab active" onclick="switchPricing('single')">Single
+                                                    User License</div>
+                                                <div class="pricing-tab" onclick="switchPricing('bulk')">Bulk/School
+                                                    License</div>
+                                            </div>
+
+                                            <div class="pricing-content">
+                                                <div class="pricing-panel active" id="single-license">
+                                                    <h3 class="text-light">Single User License</h3>
+                                                    <div class="price-tag">₦35,000 per user annually</div>
+                                                    <p>Valid for one user for 12 months. Ideal for parents who want
+                                                        premium home learning resources for their child.</p>
+
+                                                </div>
+
+                                                <div class="pricing-panel" id="bulk-license">
+                                                    <h3 class="text-light">Bulk/School License</h3>
+                                                    <div class="price-tag">Contact Us</div>
+                                                    <p>For private schools and learning centers. Gives every enrolled
+                                                        learner access to the full SmartBooks suite.</p>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="pricing-footer">
+                                                <p><strong>All packages include: curriculum-aligned content, multimedia
+                                                        lessons, assessment tools and technical support.</strong></p>
+                                            </div>
+                                        </div>
                                     </section>
                                 </div>
                             </div>
@@ -2775,6 +2916,26 @@
         href='images/89054b2327bf534d551ffc497133cd3e6e7d.css?ver=10aba' media='all' />
 
     <script data-optimized="1" src="images/7a4958d262834fff1ef3c9b1b724f7a6ca99.js" defer></script>
+    <script>
+        function switchPricing(type) {
+            // Update tabs
+            document.querySelectorAll('.pricing-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Update panels
+            document.querySelectorAll('.pricing-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+
+            if (type === 'single') {
+                document.getElementById('single-license').classList.add('active');
+            } else {
+                document.getElementById('bulk-license').classList.add('active');
+            }
+        }
+    </script>
 </body>
 
 </html>

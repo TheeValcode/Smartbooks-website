@@ -36,11 +36,13 @@
     <style>
         .pricing-section {
             background: linear-gradient(180deg, #1f1c3b 0%, #1a2a49 100%);
-            padding: 60px 0;
+            padding: 60px 15px;
             color: white;
-            min-width: 1400px;
-            margin-bottom: 50px;
+            margin: 0 auto 50px;
             border-radius: 20px;
+            max-width: 1200px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .pricing-container {
@@ -64,12 +66,11 @@
         .pricing-tabs {
             display: flex;
             justify-content: center;
-            margin-bottom: 40px;
-            position: relative;
+            margin: 0 auto 40px;
+            max-width: 500px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 30px;
             padding: 5px;
-            margin: 0 auto 40px;
         }
 
         .pricing-tab {
@@ -90,12 +91,9 @@
         }
 
         .pricing-content {
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
             position: relative;
-            overflow: hidden;
-            max-width: 1100px;
+            min-height: 200px;
+            margin: 40px 0;
         }
 
         .pricing-panel {
@@ -104,7 +102,17 @@
             padding: 30px;
             width: 100%;
             position: absolute;
-            transition: transform 0.5s ease;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-panel.active {
+            opacity: 1;
+            visibility: visible;
+            position: relative;
         }
 
         .pricing-panel.active {
@@ -142,6 +150,13 @@
             font-weight: bold;
             color: #d81b60;
             margin: 20px 0;
+        }
+
+        .pricing-footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -1001,18 +1016,15 @@
                         </div>
                     </section>
                     <section
-                        class="elementor-section elementor-top-section elementor-element elementor-element-d3b515f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                        class="elementor-section elementor-top-section elementor-element elementor-element-d3b515f elementor-section-boxed elementor-section-height-default elementor-section-height-default force-no-bg"
                         data-id="d3b515f" data-element_type="section"
-                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                        <div class="elementor-container elementor-column-gap-default">
+                        style="all: unset !important; background: transparent !important; background-color: transparent !important; background-image: none !important; position: relative !important; display: block !important;">
+                        <div class="elementor-container elementor-column-gap-default" style="margin-top: 50px;">
                             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f61ccf2"
-                                data-id="f61ccf2" data-element_type="column"
-                                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                data-id="f61ccf2" data-element_type="column" style="background: none !important;">
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-8a9928e elementor-absolute elementor-hidden-mobile elementor-widget__width-initial icon-moving-rotate elementor-view-default elementor-widget elementor-widget-icon"
-                                        data-id="8a9928e" data-element_type="widget"
-                                        data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
-                                        data-widget_type="icon.default">
+                                        data-id="8a9928e" data-element_type="widget" data-widget_type="icon.default">
                                         <div class="elementor-widget-container">
                                             <div class="elementor-icon-wrapper">
                                                 <div class="elementor-icon">
@@ -1024,13 +1036,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="elementor-element elementor-element-1707612 elementor-widget elementor-widget-radiant-custom-heading"
+                                    <div class="elementor-element elementor-element-1707612 elementor-widget elementor-widget-radiant-custom-heading text-dark mt-2"
                                         data-id="1707612" data-element_type="widget"
                                         data-widget_type="radiant-custom-heading.default">
                                         <div class="elementor-widget-container">
                                             <div class="rt-hover-heading ">
                                                 <h2 class="rt-title-heading">
-                                                    <span class="rt-highlight-txt">Flexible, Transparent, and Affordable Pricing
+                                                    <span class="rt-highlight-txt text-dark">Flexible, Transparent, and
+                                                        Affordable Pricing
                                                         <span class="rt-underline-txt">
                                                             <svg width="208" height="16" viewBox="0 0 208 16"
                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1045,185 +1058,63 @@
                                                 <div class="elementor-element elementor-element-b509810 elementor-widget elementor-widget-text-editor"
                                                     data-id="b509810" data-element_type="widget"
                                                     data-widget_type="text-editor.default">
-                                                    <div class="elementor-widget-container text-light mt-3 text-center">
+                                                    <div
+                                                        class="elementor-widget-container text-dark mt-3 text-center mb-0">
                                                         We believe quality education should
                                                         be accessible to everyone. That’s why we offer multiple
                                                         licensing
                                                         models to fit the needs of individuals, schools, and education
                                                         partners.</div>
+                                                    <hr />
                                                 </div>
                                                 <!-- <div class="elementor-element elementor-element-bc671bc elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                                                    data-id="bc671bc" data-element_type="widget"
-                                                    data-widget_type="divider.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-divider">
-                                                            <span class="elementor-divider-separator">
-                                                            </span>
-                                                        </div>
+                                                data-id="bc671bc" data-element_type="widget"
+                                                data-widget_type="divider.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-divider">
+                                                        <span class="elementor-divider-separator">
+                                                        </span>
                                                     </div>
-                                                </div> -->
+                                                </div>
+                                            </div> -->
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="elementor-element elementor-element-2e62107 elementor-widget elementor-widget-text-editor"
-                                        data-id="2e62107" data-element_type="widget"
-                                        data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            <img src="images/modes.png" alt="modes"
-                                                style="max-width: 100%; height: auto;" />
-                                        </div>
-                                    </div> -->
 
                                     <section class="pricing-section elementor-section elementor-inner-section">
                                         <div class="pricing-container elementor-container elementor-column-gap-default
 
-                                            <div class="pricing-tabs">
-                                                <div class="pricing-tab active" onclick="switchPricing('single')">Single
-                                                    User License</div>
-                                                <div class="pricing-tab" onclick="switchPricing('bulk')">Bulk/School
-                                                    License</div>
+                                        <div class="pricing-tabs">
+                                            <div class="pricing-tab active" onclick="switchPricing('single')">Single
+                                                User License</div>
+                                            <div class="pricing-tab" onclick="switchPricing('bulk')">Bulk/School
+                                                License</div>
+                                        </div>
+
+                                        <div class="pricing-content">
+                                            <div class="pricing-panel active" id="single-license">
+                                                <h3 class="text-light">Single User License</h3>
+                                                <div class="price-tag">₦35,000 per user annually</div>
+                                                <p>Valid for one user for 12 months. Ideal for parents who want
+                                                    premium home learning resources for their child.</p>
+
                                             </div>
 
-                                            <div class="pricing-content">
-                                                <div class="pricing-panel active" id="single-license">
-                                                    <h3 class="text-light">Single User License</h3>
-                                                    <div class="price-tag">₦35,000 per user annually</div>
-                                                    <p>Valid for one user for 12 months. Ideal for parents who want
-                                                        premium home learning resources for their child.</p>
+                                            <div class="pricing-panel" id="bulk-license">
+                                                <h3 class="text-light">Bulk/School License</h3>
+                                                <div class="price-tag">Contact Us</div>
+                                                <p>For private schools and learning centers. Gives every enrolled
+                                                    learner access to the full SmartBooks suite.</p>
 
-                                                </div>
-
-                                                <div class="pricing-panel" id="bulk-license">
-                                                    <h3 class="text-light">Bulk/School License</h3>
-                                                    <div class="price-tag">Contact Us</div>
-                                                    <p>For private schools and learning centers. Gives every enrolled
-                                                        learner access to the full SmartBooks suite.</p>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="pricing-footer">
-                                                <p><strong>All packages include: curriculum-aligned content, multimedia
-                                                        lessons, assessment tools and technical support.</strong></p>
                                             </div>
                                         </div>
-                                    </section>
 
-
-                                    <!-- <section
-                                        class="elementor-section elementor-inner-section elementor-element elementor-element-1bad306 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                                        data-id="1bad306" data-element_type="section">
-                                        <div class="elementor-container elementor-column-gap-default">
-                                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-48f0bef"
-                                                data-id="48f0bef" data-element_type="column">
-                                                <div class="elementor-widget-wrap elementor-element-populated">
-                                                    <div class="elementor-element elementor-element-8764ffa elementor-widget elementor-widget-radiant-custom-button"
-                                                        data-id="8764ffa" data-element_type="widget"
-                                                        data-widget_type="radiant-custom-button.default">
-                                                        <div class="elementor-widget-container">
-                                                            <div class="radiantthemes-custom-button element-four">
-                                                                <div class="rt-arrow-btn"><a href="contact.html" target="_blank"
-                                                                        rel="nofollow" class="rt-readmore-btn">Download
-                                                                        SmartBooks</a></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-12168bb"
-                                                data-id="12168bb" data-element_type="column">
-                                                <div class="elementor-widget-wrap elementor-element-populated">
-                                                    <div class="elementor-element elementor-element-66d0b1e elementor-widget elementor-widget-radiant-custom-button"
-                                                        data-id="66d0b1e" data-element_type="widget"
-                                                        data-widget_type="radiant-custom-button.default">
-                                                        <div class="elementor-widget-container">
-                                                            <div class="radiantthemes-custom-button element-four">
-                                                                <div class="rt-arrow-btn"><a href="#" target="_blank"
-                                                                        rel="nofollow" class="rt-readmore-btn">Start
-                                                                        Learning</a></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <div class="pricing-footer">
+                                            <p><strong>All packages include: curriculum-aligned content, multimedia
+                                                    lessons, assessment tools and technical support.</strong></p>
                                         </div>
-                                    </section> -->
-
-                                    <!-- <div class="elementor-element elementor-element-6c996b8 elementor-icon-list--layout-inline elementor-align-center elementor-mobile-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                                        data-id="6c996b8" data-element_type="widget"
-                                        data-widget_type="icon-list.default">
-                                        <div class="elementor-widget-container">
-                                            <ul class="elementor-icon-list-items elementor-inline-items">
-                                                <li class="elementor-icon-list-item elementor-inline-item">
-                                                    <span class="elementor-icon-list-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                            viewBox="0 0 16 16" fill="none">
-                                                            <path
-                                                                d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
-                                                                stroke="#C7C7C7" stroke-linecap="round"
-                                                                stroke-linejoin="round"></path>
-                                                            <path d="M5.375 8.875L7.125 10.625L11.5 6.25"
-                                                                stroke="#C7C7C7" stroke-linecap="round"
-                                                                stroke-linejoin="round"></path>
-                                                        </svg> </span>
-
-
-                                                    <span class="elementor-icon-list-text">Works completely
-                                                        offline</span>
-                                                </li>
-                                                <li class="elementor-icon-list-item elementor-inline-item">
-                                                    <span class="elementor-icon-list-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                            viewBox="0 0 16 16" fill="none">
-                                                            <path
-                                                                d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
-                                                                stroke="#C7C7C7" stroke-linecap="round"
-                                                                stroke-linejoin="round"></path>
-                                                            <path d="M5.375 8.875L7.125 10.625L11.5 6.25"
-                                                                stroke="#C7C7C7" stroke-linecap="round"
-                                                                stroke-linejoin="round"></path>
-                                                        </svg> </span>
-                                                    <span class="elementor-icon-list-text">AI-powered tutoring when
-                                                        online</span>
-                                                </li>
-                                                <li class="elementor-icon-list-item elementor-inline-item">
-                                                    <span class="elementor-icon-list-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                            viewBox="0 0 16 16" fill="none">
-                                                            <path
-                                                                d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
-                                                                stroke="#C7C7C7" stroke-linecap="round"
-                                                                stroke-linejoin="round"></path>
-                                                            <path d="M5.375 8.875L7.125 10.625L11.5 6.25"
-                                                                stroke="#C7C7C7" stroke-linecap="round"
-                                                                stroke-linejoin="round"></path>
-                                                        </svg> </span>
-                                                    <span class="elementor-icon-list-text">Nigerian curriculum
-                                                        aligned</span>
-                                                </li>
-                                                <li class="elementor-icon-list-item elementor-inline-item">
-                                                    <span class="elementor-icon-list-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                            viewBox="0 0 16 16" fill="none">
-                                                            <path
-                                                                d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
-                                                                stroke="#C7C7C7" stroke-linecap="round"
-                                                                stroke-linejoin="round"></path>
-                                                            <path d="M5.375 8.875L7.125 10.625L11.5 6.25"
-                                                                stroke="#C7C7C7" stroke-linecap="round"
-                                                                stroke-linejoin="round"></path>
-                                                        </svg> </span>
-                                                    <span class="elementor-icon-list-text">Performance tracking
-                                                        built-in</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
                     </section>
-
                     <!-- <section
                         class="elementor-section elementor-top-section elementor-element elementor-element-6d56226 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                         data-id="6d56226" data-element_type="section">
@@ -1581,8 +1472,8 @@
                                         <div class="elementor-widget-container">
                                             <div class="rt-hover-heading ">
                                                 <h2 class="rt-title-heading">why should <span
-                                                        class="rt-highlight-txt">schools </span><span
-                                                        class="highlight-after-text"> choose
+                                                        class="rt-highlight-txt">schools
+                                                    </span><span class="highlight-after-text"> choose
                                                         SmartBooks platform?</span></h2>
                                             </div>
                                         </div>
@@ -1683,26 +1574,23 @@
                                         data-widget_type="radiant-custom-button.default">
                                         <div class="elementor-widget-container">
                                             <div class="radiantthemes-custom-button element-four">
-                                                <div class="rt-arrow-btn"><a href="pricing.html" target="_blank"
-                                                        rel="nofollow" class="rt-readmore-btn">Start Learning</a></div>
+                                                <div class="rt-arrow-btn"><a href="#" target="_blank" rel="nofollow"
+                                                        class="rt-readmore-btn">Start Learning</a></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="elementor-element elementor-element-6ed10f6 elementor-widget__width-initial elementor-hidden-mobile_extra elementor-hidden-mobile elementor-aspect-ratio-169 elementor-widget elementor-widget-video"
                                         data-id="6ed10f6" data-element_type="widget"
-                                        data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=jiQD1Gu1MzY&quot;}"
+                                        data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/nfwahEddFuY?si=T5V5FVcsQ8aJe9OD&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;modestbranding&quot;:&quot;yes&quot;,&quot;show_image_overlay&quot;:&quot;yes&quot;,&quot;image_overlay&quot;:{&quot;url&quot;:&quot;images\/Play-Button.png&quot;},&quot;lightbox&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;,&quot;aspect_ratio&quot;:&quot;169&quot;}"
                                         data-widget_type="video.default">
                                         <div class="elementor-widget-container">
                                             <div class="elementor-wrapper elementor-open-lightbox">
                                                 <div class="elementor-custom-embed-image-overlay"
                                                     data-elementor-open-lightbox="yes"
-                                                    data-elementor-lightbox="{&quot;type&quot;:&quot;video&quot;,&quot;videoType&quot;:&quot;youtube&quot;,&quot;url&quot;:&quot;https:\/\/www.youtube.com\/embed\/jiQD1Gu1MzY?feature=oembed&amp;start&amp;end&amp;wmode=opaque&amp;loop=0&amp;controls=1&amp;mute=1&amp;rel=0&amp;modestbranding=1&quot;}"
-                                                    e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJ0eXBlIjoidmlkZW8iLCJ2aWRlb1R5cGUiOiJ5b3V0dWJlIiwidXJsIjoiaHR0cHM6XC9cL3d3dy55b3V0dWJlLmNvbVwvZW1iZWRcL1hIT21CVjRqc19FP2ZlYXR1cmU9b2VtYmVkJnN0YXJ0JmVuZCZ3bW9kZT1vcGFxdWUmbG9vcD0wJmNvbnRyb2xzPTEmbXV0ZT0xJnJlbD0wJm1vZGVzdGJyYW5kaW5nPTEiLCJtb2RhbE9wdGlvbnMiOnsiaWQiOiJlbGVtZW50b3ItbGlnaHRib3gtNmVkMTBmNiIsImVudHJhbmNlQW5pbWF0aW9uIjoiIiwiZW50cmFuY2VBbmltYXRpb25fdGFibGV0IjoiIiwiZW50cmFuY2VBbmltYXRpb25fbW9iaWxlIjoiIiwidmlkZW9Bc3BlY3RSYXRpbyI6IjE2OSJ9fQ%3D%3D">
+                                                    data-elementor-lightbox="{&quot;type&quot;:&quot;video&quot;,&quot;videoType&quot;:&quot;youtube&quot;,&quot;url&quot;:&quot;https:\/\/www.youtube.com\/embed\/nfwahEddFuY?feature=oembed&amp;start=0&amp;end=&amp;wmode=opaque&amp;loop=0&amp;controls=1&amp;mute=1&amp;rel=0&amp;modestbranding=1&quot;,&quot;modalOptions&quot;:{&quot;id&quot;:&quot;elementor-lightbox-6ed10f6&quot;,&quot;entranceAnimation&quot;:&quot;&quot;,&quot;videoAspectRatio&quot;:&quot;169&quot;}}">
                                                     <img data-lazyloaded="1" data-placeholder-resp="184x184"
                                                         src="images/Play-Button.png" decoding="async" width="184"
-                                                        height="184"
-                                                        data-src="https://apptek.radiantthemes.com/wp-content/uploads/2022/08/Play-Button.png"
-                                                        class="attachment-full size-full" alt="Play Button"
+                                                        height="184" class="attachment-full size-full" alt="Play Button"
                                                         data-sizes="(max-width: 184px) 100vw, 184px" />
                                                 </div>
                                             </div>
@@ -1731,9 +1619,10 @@
                                         data-widget_type="radiant-custom-heading.default">
                                         <div class="elementor-widget-container">
                                             <div class="rt-hover-heading ">
-                                                <h2 class="rt-title-heading">What Our <span
-                                                        class="rt-highlight-txt">Users </span><span
-                                                        class="highlight-after-text"> Say About SmartBooks?</span></h2>
+                                                <h2 class="rt-title-heading">Smart Parents <span
+                                                        class="rt-highlight-txt">Love
+                                                    </span><span class="highlight-after-text">
+                                                        SmartBooks</span></h2>
                                             </div>
                                         </div>
                                     </div>
@@ -1779,7 +1668,8 @@
                                                                         class="testi-pic-three" alt="Testimonial Image">
                                                                 </div>
                                                                 <div class="testimonial-title-data"><span
-                                                                        class="title">Mr. Adebayo Folake</span>
+                                                                        class="title">Mr. Adebayo
+                                                                        Folake</span>
                                                                     <p class="designation">Primary School Principal</p>
                                                                 </div>
                                                             </div>
@@ -1812,7 +1702,8 @@
                                                                         class="testi-pic-three" alt="Testimonial Image">
                                                                 </div>
                                                                 <div class="testimonial-title-data"><span
-                                                                        class="title">Mr. Emeka Okafor</span>
+                                                                        class="title">Mr. Emeka
+                                                                        Okafor</span>
                                                                     <p class="designation">Secondary School Teacher</p>
                                                                 </div>
                                                             </div>
@@ -1829,11 +1720,11 @@
                                                                         <path
                                                                             d="M90.1293 2.57694C90.7199 1.02543 92.2075 0 93.8676 0H123.617C126.419 0 128.352 2.80507 127.356 5.42306L103.142 69.0306C102.552 70.5821 101.064 71.6075 99.4041 71.6075H69.6543C66.853 71.6075 64.9194 68.8024 65.9159 66.1844L90.1293 2.57694Z" />
                                                                     </svg>
-                                                                    <p>"As a parent, SmartBooks gives me peace of mind.
-                                                                        My children can study quality content at home
-                                                                        with voice coaching and performance tracking.
-                                                                        It's like having a private tutor available
-                                                                        24/7."</p>
+                                                                    <p>SmartBooks gives parents peace of mind. Children
+                                                                        can study quality content at home with voice
+                                                                        coaching and performance tracking.
+                                                                        It's like having a private tutor available 24/7.
+                                                                    </p>
                                                                 </blockquote>
                                                             </div>
                                                             <div class="testimonial-title">
@@ -1845,7 +1736,8 @@
                                                                         class="testi-pic-three" alt="Testimonial Image">
                                                                 </div>
                                                                 <div class="testimonial-title-data"><span
-                                                                        class="title">Dr. Fatima Ibrahim</span>
+                                                                        class="title">Dr. Fatima
+                                                                        Ibrahim</span>
                                                                     <p class="designation">Parent & Education Advocate
                                                                     </p>
                                                                 </div>
@@ -2108,8 +2000,9 @@
                                         <div class="elementor-widget-container">
                                             <div class="rt-hover-heading ">
                                                 <h2 class="rt-title-heading">Transform <span
-                                                        class="rt-highlight-txt">Education </span><span
-                                                        class="highlight-after-text"> with SmartBooks</span></h2>
+                                                        class="rt-highlight-txt">Education
+                                                    </span><span class="highlight-after-text"> with SmartBooks</span>
+                                                </h2>
                                             </div>
                                         </div>
                                     </div>
@@ -2156,10 +2049,9 @@
                                                     </div>
                                                     <div id="a7cde53f1" class="collapse " aria-labelledby="a7cde53f"
                                                         data-parent="#a2027755033">
-                                                        <div class="card-body">Retail: ₦35,000 per user annually.
-                                                            Schools: ₦10,000 per child wholesale. Custom Branded: ₦5M
-                                                            setup + ₦3,500 per child. White Label: ₦1.5M setup + ₦1,500
-                                                            per child annually.</div>
+                                                        <div class="card-body">Single User License: ₦35,000 per user
+                                                            annually.
+                                                            Bulk/Schools License: Contact Us.</div>
                                                     </div>
                                                 </div>
                                                 <div class="card">

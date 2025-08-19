@@ -6,18 +6,21 @@
     <style>
         .pricing-section {
             background: linear-gradient(180deg, #1f1c3b 0%, #1a2a49 100%);
-            padding: 60px 0;
+            padding: 40px 0;
             color: white;
-            min-width: 1400px;
+            width: 100%;
             margin-bottom: 50px;
             border-radius: 20px;
+            box-sizing: border-box;
         }
 
         .pricing-container {
             margin: 0 auto;
             padding: 0 15px;
             max-width: 1200px;
+            width: 100%;
             border-radius: 5px;
+            box-sizing: border-box;
         }
 
         .pricing-header {
@@ -34,12 +37,14 @@
         .pricing-tabs {
             display: flex;
             justify-content: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             position: relative;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 30px;
             padding: 5px;
-            margin: 0 auto 40px;
+            margin: 0 auto 30px;
+            max-width: 90%;
+            flex-wrap: wrap;
         }
 
         .pricing-tab {
@@ -52,6 +57,8 @@
             z-index: 1;
             flex: 1;
             text-align: center;
+            min-width: 160px;
+            margin: 5px 0;
         }
 
         .pricing-tab.active {
@@ -62,19 +69,21 @@
         .pricing-content {
             display: flex;
             justify-content: center;
-            margin-top: 40px;
+            margin: 30px auto 0;
             position: relative;
             overflow: hidden;
-            max-width: 1100px;
+            max-width: 90%;
+            width: 100%;
         }
 
         .pricing-panel {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 30px;
+            padding: 25px 20px;
             width: 100%;
             position: absolute;
             transition: transform 0.5s ease;
+            box-sizing: border-box;
         }
 
         .pricing-panel.active {
@@ -114,13 +123,84 @@
             margin: 20px 0;
         }
 
+        @media (max-width: 1024px) {
+            .pricing-section {
+                padding: 30px 0;
+            }
+            
+            .pricing-panel {
+                padding: 20px 15px;
+            }
+            
+            .price-tag {
+                font-size: 20px;
+                margin: 15px 0;
+            }
+        }
+        
         @media (max-width: 768px) {
             .pricing-tabs {
-                max-width: 300px;
+                max-width: 100%;
+                margin: 0 auto 20px;
+                padding: 3px;
             }
 
             .pricing-tab {
-                padding: 10px 20px;
+                padding: 8px 12px;
+                font-size: 14px;
+                min-width: 140px;
+            }
+            
+            .pricing-content {
+                margin-top: 20px;
+            }
+            
+            .pricing-panel {
+                padding: 15px 12px;
+            }
+            
+            .pricing-panel h3 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            
+            .price-tag {
+                font-size: 18px;
+                margin: 10px 0;
+            }
+            
+            .pricing-panel p {
+                font-size: 14px;
+                line-height: 1.4;
+            }
+            
+            .pricing-footer {
+                margin-top: 20px;
+            }
+            
+            .pricing-footer p {
+                font-size: 13px;
+                line-height: 1.4;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .pricing-tab {
+                min-width: 120px;
+                padding: 6px 8px;
+                font-size: 13px;
+            }
+            
+            .pricing-panel h3 {
+                font-size: 16px;
+            }
+            
+            .price-tag {
+                font-size: 16px;
+            }
+            
+            .pricing-panel p {
+                font-size: 13px;
             }
         }
     </style>

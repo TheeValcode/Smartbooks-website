@@ -112,10 +112,6 @@ This model enables education businesses,NGOs, and government programs to deploy 
 
 
 ============================================================================
-Alright, Val — here’s an **expanded** version of the content for your 4 webpages.
-I’ve kept it structured, professional, and persuasive so it feels complete for a full website section while still easy to read.
-
----
 
 ## **1. SmartBooks Modes**
 
@@ -278,5 +274,71 @@ Syllabux Learning Solutions Ltd.
 * Pricing and licensing consultations
 * Technical setup and onboarding support
 * Partnership opportunities
+
+## **5. Features**
+
+SmartBooks isn’t just another learning app—it’s a complete digital learning ecosystem built for Nigerian learners. Every feature is carefully designed to make learning easier, more engaging, and more effective for students, while giving parents, teachers, and schools the tools they need to ensure success.
+
+📶 Accessibility & Flexibility
+
+Education should never be limited by location, device type, or internet availability. SmartBooks is built to work for every student, anywhere.
+
+Fully Offline Access – Once installed, SmartBooks runs without internet. This makes it perfect for rural communities, homes with limited connectivity, or schools trying to reduce data costs. Lessons, assessments, and multimedia are all preloaded and ready to go.
+
+Multi-Device Compatibility – Whether on a desktop at school, a tablet in class, or a parent’s mobile phone at home, SmartBooks adapts seamlessly. It even runs efficiently on low-spec devices, so families and schools don’t need to invest in expensive hardware.
+
+Curriculum Alignment – Every lesson is designed around the Nigerian NERDC curriculum, Lagos Unified Scheme, NAPPS standards, and the Federal curriculum. This ensures that what students study on SmartBooks matches exactly what they’ll be tested on in school or in major national exams.
+
+📌 With SmartBooks, learning is no longer restricted by resources—it becomes available to every child.
+
+🎮 Engagement & Interactivity
+
+We know that students learn best when they’re having fun and actively participating. SmartBooks takes traditional lessons and turns them into interactive, enjoyable experiences.
+
+Interactive Lessons – Instead of passively reading, students engage with lessons through voice tutoring, illustrations, simulations, and gamified exercises that keep them motivated.
+
+Engaging Multimedia – Topics come alive with videos, animations, and real-world examples that explain difficult concepts in simple, relatable ways.
+
+Learning Enforcement – SmartBooks ensures mastery before progression. Students must understand a topic before moving on, reducing learning gaps and boosting long-term retention.
+
+📌 Every click, every question, and every lesson is designed to make learning stick.
+
+🎯 Personalization & Support
+
+No two students learn the same way. SmartBooks adapts to each learner’s strengths, weaknesses, and pace.
+
+Personalized Learning Paths – Parents and teachers can adjust subject access, set target pass marks, and control difficulty levels. This means students aren’t rushed or held back—they learn at a speed that suits them.
+
+Self-Paced Learning – With voice coaching, adjustable difficulty, and feedback for every page, students gain confidence while learning independently.
+
+AI-Powered Support (Online Mode) – When connected to the internet, SmartBooks unlocks extra features like instant tutoring, teacher tracking apps, and real-time parent notifications, providing stronger guidance and feedback.
+
+📌 SmartBooks creates an environment where every child feels supported, guided, and capable.
+
+📊 Performance & Results
+
+Parents and teachers need more than lessons—they need tools to measure progress and results. SmartBooks provides transparent, real-time insights.
+
+Performance Dashboards – Visual reports make it easy for parents and teachers to track improvement, identify weak areas, and celebrate achievements—all without constant supervision.
+
+Exam & Assessment Tools – Students prepare like never before with timed subject assessments, hundreds of randomized questions, and progressive difficulty levels. This builds confidence for WAEC, NECO, and other critical exams.
+
+Confidence Building – By practicing in a safe, supportive environment, students gain the self-belief they need before sitting for major exams, reducing test anxiety and improving outcomes.
+
+📌 SmartBooks doesn’t just teach—it proves results, giving parents peace of mind and students the confidence to succeed.
+
+✨ The SmartBooks Advantage
+
+With SmartBooks, learning goes beyond textbooks:
+
+Students enjoy interactive, curriculum-based lessons that keep them engaged.
+
+Parents gain full visibility and control over their child’s learning journey.
+
+Teachers use SmartBooks to reinforce classroom teaching with extra support.
+
+Schools benefit from cost savings, improved performance, and innovation.
+
+SmartBooks is more than an app—it’s a future-ready learning partner designed to empower every student in Nigeria and beyond.
 
 ---

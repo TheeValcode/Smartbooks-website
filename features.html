@@ -3,7 +3,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <meta name="description"
         content="SmartBooks - Nigeria's premier offline digital textbook series for Primary 1 to SS3. Interactive learning with 15-30 subjects, voice tutoring, games, and AI assistance. Works without internet. Perfect for students, parents, teachers, and schools.">
     <title>SmartBooks - Nigeria's Premier Offline Digital Textbook Series | Interactive Learning for Primary & Secondary
@@ -34,21 +34,53 @@
     <meta name="msapplication-TileImage" content="images/smartbooks_favicon.jpg" />
 
     <style>
+        /* Reset and Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
         .features-hero {
             background: linear-gradient(180deg, #1f1c3b 0%, #1a2a49 100%);
-            padding: 80px 15px 100px;
+            padding: 60px 15px 40px;
             color: white;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
+        @media (min-width: 768px) {
+            .features-hero {
+                padding: 80px 15px 100px;
+            }
+        }
+
         .section-title {
-            font-size: 36px;
-            margin-bottom: 20px;
+            font-size: 28px;
+            margin-bottom: 15px;
             color: white;
             position: relative;
             display: inline-block;
+            line-height: 1.3;
+            padding: 0 15px;
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
         }
 
         .section-title:after {
@@ -63,66 +95,198 @@
         }
 
         .section-subtitle {
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto 50px;
+            font-size: 16px;
+            max-width: 100%;
+            margin: 0 auto 30px;
             line-height: 1.6;
             color: rgba(255, 255, 255, 0.8);
+            padding: 0 15px;
+        }
+
+        @media (min-width: 768px) {
+            .section-subtitle {
+                font-size: 18px;
+                max-width: 800px;
+                margin-bottom: 50px;
+            }
         }
 
         .feature-section {
-            padding: 80px 0;
+            padding: 40px 0;
             position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .feature-section {
+                padding: 80px 0;
+            }
         }
 
         .feature-section:nth-child(even) {
             background: rgba(255, 255, 255, 0.03);
         }
 
+        /* Responsive container */
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+
+        /* Responsive feature cards */
+        .feature-card {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            width: 100%;
+            min-height: auto;
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 576px) {
+            .feature-card {
+                flex-direction: row;
+                padding: 20px;
+                min-height: 120px;
+            }
+        }
+
         .feature-title {
-            font-size: 28px;
-            margin-bottom: 20px;
+            font-size: 24px;
+            margin-bottom: 15px;
             color: white;
+            line-height: 1.3;
+            padding: 0 10px;
+        }
+
+        @media (min-width: 768px) {
+            .feature-title {
+                font-size: 28px;
+                margin-bottom: 20px;
+                padding: 0;
+            }
         }
 
         .feature-description {
-            font-size: 16px;
-            line-height: 1.8;
+            font-size: 15px;
+            line-height: 1.6;
             color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+
+        @media (min-width: 768px) {
+            .feature-description {
+                font-size: 16px;
+                line-height: 1.8;
+                margin-bottom: 30px;
+                padding: 0;
+            }
         }
 
         .feature-point {
             display: flex;
+            flex-direction: column;
             align-items: flex-start;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        @media (min-width: 576px) {
+            .feature-point {
+                flex-direction: row;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
         }
 
         .feature-point i {
             color: #d81b60;
-            margin-right: 15px;
-            font-size: 20px;
-            margin-top: 3px;
+            margin-right: 0;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        @media (min-width: 576px) {
+            .feature-point i {
+                margin-right: 15px;
+                margin-bottom: 0;
+                font-size: 20px;
+                margin-top: 3px;
+            }
         }
 
         .feature-point-content h4 {
             color: white;
-            margin-bottom: 5px;
-            font-size: 18px;
+            margin: 0 0 8px 0;
+            font-size: 16px;
+            line-height: 1.3;
+        }
+
+        @media (min-width: 576px) {
+            .feature-point-content h4 {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
         }
 
         .feature-point-content p {
             color: rgba(255, 255, 255, 0.7);
             margin: 0;
-            line-height: 1.6;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 768px) {
+            .feature-point-content p {
+                font-size: 15px;
+                line-height: 1.6;
+            }
         }
 
         .feature-highlight {
             background: rgba(216, 27, 96, 0.1);
             border-left: 3px solid #d81b60;
-            padding: 15px 20px;
-            margin: 30px 0;
+            padding: 15px;
+            margin: 20px 10px;
             border-radius: 0 5px 5px 0;
+        }
+
+        @media (min-width: 768px) {
+            .feature-highlight {
+                padding: 15px 20px;
+                margin: 30px 0;
+            }
         }
 
         .feature-highlight p {
@@ -133,15 +297,31 @@
 
         .advantage-list {
             list-style: none;
-            padding: 0;
-            margin: 30px 0;
+            padding: 0 10px;
+            margin: 20px 0;
+        }
+
+        @media (min-width: 768px) {
+            .advantage-list {
+                padding: 0;
+                margin: 30px 0;
+            }
         }
 
         .advantage-list li {
             position: relative;
             padding-left: 30px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 768px) {
+            .advantage-list li {
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
         }
 
         .advantage-list li:before {
@@ -150,26 +330,41 @@
             left: 0;
             color: #d81b60;
             font-weight: bold;
+            font-size: 16px;
         }
 
         .accessibility-footer {
             text-align: center;
-            margin-top: 30px;
-            font-size: 14px;
+            margin: 20px 15px 0;
+            font-size: 13px;
             color: #ccc;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 768px) {
+            .accessibility-footer {
+                margin: 30px 0 0;
+                font-size: 14px;
+            }
         }
 
         .pricing-content {
             position: relative;
             min-height: 180px;
-            margin: 25px 0;
+            margin: 15px 0;
             padding: 0 5px;
+        }
+
+        @media (min-width: 768px) {
+            .pricing-content {
+                margin: 25px 0;
+            }
         }
 
         .pricing-panel {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 12px;
-            padding: 20px 15px;
+            padding: 15px;
             width: 100%;
             position: absolute;
             top: 0;
@@ -178,6 +373,12 @@
             visibility: hidden;
             transition: all 0.3s ease;
             box-sizing: border-box;
+        }
+
+        @media (min-width: 768px) {
+            .pricing-panel {
+                padding: 20px 15px;
+            }
         }
 
         .pricing-panel.active {
@@ -200,8 +401,15 @@
 
         .pricing-feature {
             display: flex;
-            align-items: center;
-            margin: 10px 0;
+            align-items: flex-start;
+            margin: 8px 0;
+        }
+
+        @media (min-width: 768px) {
+            .pricing-feature {
+                align-items: center;
+                margin: 10px 0;
+            }
         }
 
         .pricing-feature i {
@@ -217,18 +425,35 @@
         }
 
         .price-tag {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
             color: #d81b60;
-            margin: 15px 0;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        @media (min-width: 576px) {
+            .price-tag {
+                font-size: 22px;
+                margin: 15px 0;
+            }
         }
 
         .pricing-footer {
             text-align: center;
-            margin-top: 20px;
-            padding: 15px 10px 0;
+            margin-top: 15px;
+            padding: 12px 10px 0;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 14px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 576px) {
+            .pricing-footer {
+                margin-top: 20px;
+                padding: 15px 10px 0;
+                font-size: 14px;
+            }
         }
 
         /* White section styles */
@@ -376,26 +601,60 @@
             }
         }
 
-        @media (max-width: 768px) {
+        /* Responsive adjustments */
+        @media (max-width: 767px) {
             .elementor-column.elementor-col-50 {
                 width: 100% !important;
-                margin-bottom: 40px;
+                margin-bottom: 30px;
+                padding: 0 10px !important;
             }
 
-            .rt-title-heading {
-                font-size: 32px !important;
-            }
-
-            h2 {
-                font-size: 28px !important;
+            .rt-title-heading, h2 {
+                font-size: 24px !important;
+                line-height: 1.3;
+                padding: 0 10px;
             }
 
             h3 {
-                font-size: 20px !important;
+                font-size: 18px !important;
+                line-height: 1.4;
             }
 
             .elementor-container {
-                padding: 0 20px;
+                padding: 0 10px !important;
+            }
+
+            /* Fix for feature cards */
+            [style*="min-width: 540px"] {
+                min-width: 100% !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 0 15px 0 !important;
+            }
+
+            /* Grid layout adjustments */
+            [style*="display: grid"] {
+                grid-template-columns: 1fr !important;
+                gap: 15px !important;
+                padding: 0 10px;
+            }
+
+            /* Text and spacing adjustments */
+            .feature-description, .feature-point-content p {
+                font-size: 14px !important;
+                line-height: 1.6;
+            }
+
+            /* Fix for images */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .elementor-column.elementor-col-50 {
+                padding: 0 15px;
             }
         }
 
@@ -1013,7 +1272,7 @@
                                         data-id="features-list" data-element_type="widget">
                                         <div class="elementor-widget-container">
                                             <div style="display: grid; gap: 15px;">
-                                                <div style="display: flex; align-items: flex-start; padding: 20px; background: rgba(255,122,80,0.05); border-radius: 12px; min-height: 120px; box-sizing: border-box; min-width: 540px;">
+                                                <div class="feature-card" style="background: rgba(255,122,80,0.05);">
                                                     <i class="fas fa-wifi" style="color: #FF7A50; font-size: 24px; margin-right: 15px; margin-top: 3px; min-width: 24px;"></i>
                                                     <div>
                                                         <h4 style="color: #333; margin: 0 0 8px 0; font-size: 18px; line-height: 1.3;">
@@ -1021,7 +1280,7 @@
                                                         <p style="color: #666; margin: 0; font-size: 14px; line-height: 1.5;">Learn without internet connectivity, perfect for any environment.</p>
                                                     </div>
                                                 </div>
-                                                <div style="display: flex; align-items: flex-start; padding: 20px; background: rgba(28,200,211,0.05); border-radius: 12px; min-height: 120px; box-sizing: border-box; min-width: 540px;">
+                                                <div class="feature-card" style="background: rgba(28,200,211,0.05);">
                                                     <i class="fas fa-book" style="color: #1CC8D3; font-size: 24px; margin-right: 15px; margin-top: 3px; min-width: 24px;"></i>
                                                     <div>
                                                         <h4 style="color: #333; margin: 0 0 8px 0; font-size: 18px; line-height: 1.3;">
@@ -1037,7 +1296,7 @@
                                                         <p style="color: #666; margin: 0; font-size: 14px; line-height: 1.5;">Works seamlessly on mobile phones, tablets, laptops, and desktops.</p>
                                                     </div>
                                                 </div>
-                                                <div style="display: flex; align-items: flex-start; padding: 20px; background: rgba(25,98,242,0.05); border-radius: 12px; min-height: 120px; box-sizing: border-box; min-width: 540px;">
+                                                <div class="feature-card" style="background: rgba(25,98,242,0.05);">
                                                     <i class="fas fa-graduation-cap" style="color: #1962F2; font-size: 24px; margin-right: 15px; margin-top: 3px; min-width: 24px;"></i>
                                                     <div>
                                                         <h4 style="color: #333; margin: 0 0 8px 0; font-size: 18px; line-height: 1.3;">
@@ -1045,7 +1304,7 @@
                                                         <p style="color: #666; margin: 0; font-size: 14px; line-height: 1.5;">Covers NERDC, Lagos Unified Scheme, NAPPS, and Federal curriculum.</p>
                                                     </div>
                                                 </div>
-                                                <div style="display: flex; align-items: flex-start; padding: 20px; background: rgba(141,9,230,0.05); border-radius: 12px; min-height: 120px; box-sizing: border-box;">
+                                                <div class="feature-card" style="background: rgba(141,9,230,0.05);">
                                                     <i class="fas fa-chart-line" style="color: #8d09e6; font-size: 24px; margin-right: 15px; margin-top: 3px; min-width: 24px;"></i>
                                                     <div>
                                                         <h4 style="color: #333; margin: 0 0 8px 0; font-size: 18px; line-height: 1.3;">
@@ -1368,7 +1627,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="elementor-element elementor-element-6c996b8 elementor-icon-list--layout-inline elementor-align-center elementor-mobile-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                    <!-- <div class="elementor-element elementor-element-6c996b8 elementor-icon-list--layout-inline elementor-align-center elementor-mobile-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                         data-id="6c996b8" data-element_type="widget"
                                         data-widget_type="icon-list.default"
                                         style="margin-top: 30px; margin-bottom: 50px;">
@@ -1396,7 +1655,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <!-- Curriculum Content -->
                                     <div class="elementor-row"
@@ -1559,15 +1818,11 @@
                         </div>
                     </section>
 
-                    <div style="width: 1200px;">
-                        <hr />
-                    </div>
-
                     <!-- Why Choose SmartBooks Section - Purple -->
                     <section
-                        class="elementor-section elementor-top-section elementor-element elementor-element-why-choose elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                        class="elementor-section elementor-top-section elementor-element elementor-element-why-choose elementor-section-boxed elementor-section-height-default elementor-section-height-default text-center"
                         data-id="why-choose" data-element_type="section" style="padding: 80px 0;">
-                        <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-container elementor-column-gap-default text-center">
                             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-why-col"
                                 data-id="why-col" data-element_type="column">
                                 <div class="elementor-widget-wrap elementor-element-populated">
@@ -1576,11 +1831,11 @@
                                             <i class="fas fa-rocket"></i>
                                         </div>
                                         <h2
-                                            style="color: #333; font-size: 36px; font-weight: 700; margin-bottom: 30px;">
+                                            style="color: #333; font-size: 36px; font-weight: 700; margin-bottom: 30px; text-align: center;">
                                             Why Choose SmartBooks?
                                         </h2>
                                         <p
-                                            style="color: #333; font-size: 20px; max-width: 800px; margin: 0 auto 40px; line-height: 1.6;">
+                                            style="color: #333; font-size: 20px; max-width: 800px; margin: 0 auto 40px; line-height: 1.6; text-align: center;">
                                             The smarter way to learn—blending textbooks, technology, and teaching into
                                             one powerful platform. SmartBooks helps children master core subjects with
                                             confidence and joy, while providing parents, teachers, and schools with the

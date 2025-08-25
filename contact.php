@@ -1,18 +1,33 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $inquiry_type = $_POST['inquiry_type'];
-    $organization = $_POST['organization'];
-    $message = $_POST['message'];
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Sanitize input
+    function clean_input($data) {
+        return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
+    }
+
+    $first_name   = clean_input($_POST['first_name'] ?? '');
+    $last_name    = clean_input($_POST['last_name'] ?? '');
+    $email        = clean_input($_POST['email'] ?? '');
+    $phone        = clean_input($_POST['phone'] ?? '');
+    $inquiry_type = clean_input($_POST['inquiry_type'] ?? '');
+    $organization = clean_input($_POST['organization'] ?? '');
+    $message      = clean_input($_POST['message'] ?? '');
+
+    // Validate email properly
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $response = [
+            'status' => 'error',
+            'message' => 'Invalid email address. Please use a valid one.'
+        ];
+        header('Content-Type: application/json');
+        echo json_encode($response);
+        exit;
+    }
 
     // Email setup
     $to = "smartbooksdigital@gmail.com";
     $subject = "New Contact Form Submission from SmartBooks Website";
-    
+
     // Email body
     $email_body = "You have received a new contact form submission:\n\n";
     $email_body .= "First Name: $first_name\n";
@@ -23,8 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_body .= "Organization: $organization\n";
     $email_body .= "Message:\n$message\n";
 
-    // Headers
-    $headers = "From: $email\r\n";
+    // Safer headers
+    $headers = "From: SmartBooks Website <info@smartbooks.ng>\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion();
 
@@ -35,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($mail_sent) {
         $response = [
             'status' => 'success',
-            'message' => 'Thank you for your message! We\'ll get back to you within 24 hours.'
+            'message' => 'Thank you for your message! We’ll get back to you within 24 hours.'
         ];
     } else {
         $response = [
@@ -44,14 +59,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ];
     }
 
-    // If it's an AJAX request, return JSON response
-    if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-        header('Content-Type: application/json');
-        echo json_encode($response);
-        exit;
-    }
+    // Always return JSON
+    header('Content-Type: application/json');
+    echo json_encode($response);
+    exit;
 }
 ?>
+
 <!doctype html>
 <html lang="en-US">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -1172,10 +1186,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         const formData = new FormData(form);
 
         // Send form data using fetch
-        fetch(window.location.href, {
-            method: 'POST',
-            body: formData
-        })
+        fetch("contact.php", {   // instead of window.location.href
+    method: 'POST',
+    body: formData
+})
+
         .then(response => response.json())
         .then(data => {
             // Reset button

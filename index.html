@@ -3077,6 +3077,53 @@
 
     <script data-optimized="1" src="images/7a4958d262834fff1ef3c9b1b724f7a6ca99.js" defer></script>
     <script>
+        (self.webpackChunkelementor = self.webpackChunkelementor || []).push([[357], {
+            1327: (e, t, n) => {
+                "use strict";
+                var r = n(7914);
+                n(59);
+                var i = r(n(9501)), s = r(n(4058)), o = r(n(2821));
+                class TextEditor extends o.default {
+                    onInit() {
+                        super.onInit(...arguments),
+                        this.setUserSettings()
+                    }
+                    getSettings(e) {
+                        const t = super.getSettings(e);
+                        return this.setUserSettings(t),
+                        t
+                    }
+                    setUserSettings(e) {
+                        this.elements.$backgroundSlideShowContainer &&
+                        "slideshow" === e?.background_background &&
+                        this.elements.$backgroundSlideShowContainer
+                            .data("swiper")?.autoplay.stop()
+                    }
+                    onElementChange(e) {
+                        "background_background" === e &&
+                        (this.elements.$backgroundSlideShowContainer &&
+                        this.elements.$backgroundSlideShowContainer
+                            .data("swiper")?.autoplay.stop(),
+                        this.runElementsHandlers())
+                    }
+                    getHandlers() {
+                        return {
+                            Swiper: o.default,
+                            BackgroundVideo: i.default,
+                            BackgroundSlideshow: s.default
+                        }
+                    }
+                }
+                e.exports = t => {
+                    new TextEditor({
+                        $element: t
+                    })
+                }
+            }
+        }]);
+        </script>
+        
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
             const counters = document.querySelectorAll(".counter");
             counters.forEach(counter => {

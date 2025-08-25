@@ -11,6 +11,197 @@
             background-position: center;
         }
 
+        .video-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+
+        /* Section Header Styles */
+        .video-section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .smartbooks-hover-heading .smartbooks-title-heading {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .smartbooks-highlight-txt {
+            position: relative;
+            color: #d81b60;
+        }
+
+        .smartbooks-underline-txt {
+            position: relative;
+        }
+
+        .smartbooks-underline-txt svg {
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        .video-section-description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .smartbooks-video-container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .video-wrapper:hover .video-overlay {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .smartbooks-play-button {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #d81b60, #ff4081);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(216, 27, 96, 0.3);
+        }
+
+        .video-wrapper:hover .smartbooks-play-button {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(216, 27, 96, 0.4);
+        }
+
+        .smartbooks-play-button::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 20px solid white;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            margin-left: 4px;
+        }
+
+        .video-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+            aspect-ratio: 16/9;
+        }
+
+        .smartbooks-video-hidden {
+            display: none;
+        }
+
+        .video-loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 18px;
+            z-index: 10;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .video-section {
+                padding: 40px 0;
+            }
+
+            .smartbooks-video-container {
+                padding: 0 10px;
+            }
+
+            .smartbooks-play-button {
+                width: 60px;
+                height: 60px;
+            }
+
+            .smartbooks-play-button::before {
+                border-left: 15px solid white;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                margin-left: 3px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-section {
+                padding: 30px 0;
+            }
+
+            .smartbooks-play-button {
+                width: 50px;
+                height: 50px;
+            }
+
+            .smartbooks-play-button::before {
+                border-left: 12px solid white;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                margin-left: 2px;
+            }
+        }
+
         .pricing-section {
             background: linear-gradient(180deg, #1f1c3b 0%, #1a2a49 100%);
             padding: 40px 0;
@@ -304,16 +495,16 @@
                                                                                 </li>
                                                                                 <li id="menu-item-36929"
                                                                                     class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-36929 rt-dropdown">
-                                                                                    <a href="#smartBooksModes"
+                                                                                    <a href="smartbooks-modes.html"
                                                                                         data-description="">SmartBooks
                                                                                         Modes
                                                                                     </a>
                                                                                 </li>
-                                                                                <li id="menu-item-43071"
+                                                                                <!-- <li id="menu-item-43071"
                                                                                     class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-43071 rt-dropdown">
                                                                                     <a href="#curriculum"
                                                                                         data-description="">Curriculum</a>
-                                                                                </li>
+                                                                                </li> -->
                                                                                 <li id="menu-item-36940"
                                                                                     class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-36940">
                                                                                     <a href="#pricing"
@@ -358,7 +549,7 @@
                                                                         <div
                                                                             class="radiantthemes-menu-custom-button visible-lg hidden-xs hidden-md">
                                                                             <a class="radiantthemes-menu-custom-button-main"
-                                                                                href="contact.html"
+                                                                                href="contact.php"
                                                                                 rel="nofollow">Contact Us</a>
                                                                         </div>
                                                                         <div
@@ -399,16 +590,16 @@
                                                                                 </li>
                                                                                 <li
                                                                                     class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-36929 rt-dropdown">
-                                                                                    <a href="#smartBooksModes"
+                                                                                    <a href="smartbooks-modes.html"
                                                                                         data-description="">SmartBooks
                                                                                         Modes</a>
                                                                                 </li>
 
-                                                                                <li
+                                                                                <!-- <li
                                                                                     class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-36940">
                                                                                     <a href="#curriculum"
                                                                                         data-description="">Curriculum</a>
-                                                                                </li>
+                                                                                </li> -->
                                                                                 <li
                                                                                     class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-43071 rt-dropdown">
                                                                                     <a href="#pricing"
@@ -453,7 +644,7 @@
                                                                         <div
                                                                             class="radiantthemes-menu-custom-button visible-lg hidden-xs hidden-md">
                                                                             <a class="radiantthemes-menu-custom-button-main"
-                                                                                href="contact.html"
+                                                                                href="contact.php"
                                                                                 rel="nofollow">Contact Us</a>
                                                                         </div>
                                                                         <div
@@ -501,15 +692,15 @@
                                                                             </li>
                                                                             <li
                                                                                 class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-36929">
-                                                                                <a href="#smartBooksModes"
+                                                                                <a href="smartbooks-modes.html"
                                                                                     data-description="">SmartBooks
                                                                                     Modes</a>
                                                                             </li>
-                                                                            <li
+                                                                            <!-- <li
                                                                                 class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-43071">
                                                                                 <a href="#curriculum"
                                                                                     data-description="">Curriculum</a>
-                                                                            </li>
+                                                                            </li> -->
                                                                             <li
                                                                                 class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-36940">
                                                                                 <a href="#pricing"
@@ -522,7 +713,7 @@
                                                                             </li> -->
                                                                             <li
                                                                                 class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-36931">
-                                                                                <a href="contact.html/"
+                                                                                <a href="contact.php"
                                                                                     data-description="">Contact Us</a>
                                                                             </li>
                                                                         </ul>
@@ -549,7 +740,8 @@
                     <section
                         class="elementor-section elementor-top-section elementor-element elementor-element-17fad0f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                         data-id="17fad0f" data-element_type="section"
-                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"
+                        style="position: relative; overflow: hidden; background: linear-gradient(180deg, #1b2a49 0%, #1c1c3a 100%); background-size: cover; background-position: center;">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b5568ae"
                                 data-id="b5568ae" data-element_type="column">
@@ -689,8 +881,8 @@
                                             <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-f578f59"
                                                 data-id="f578f59" data-element_type="column">
                                                 <div class="elementor-widget-wrap elementor-element-populated">
-                                                    <div class="elementor-element elementor-element-daf51e0 elementor-widget__width-initial m-0 elementor-widget elementor-widget-radiant-custom-button"
-                                                        data-id="daf51e0" data-element_type="widget"
+                                                    <div class="elementor-element elementor-element-c8e0a13 elementor-widget__width-initial m-0 elementor-widget elementor-widget-radiant-custom-button"
+                                                        data-id="c8e0a13" data-element_type="widget"
                                                         data-widget_type="radiant-custom-button.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="radiantthemes-custom-button element-four">
@@ -700,7 +892,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="elementor-element elementor-element-c8e0a13 elementor-widget__width-initial m-0 elementor-widget elementor-widget-radiant-custom-button"
+                                                    <!-- <div class="elementor-element elementor-element-c8e0a13 elementor-widget__width-initial m-0 elementor-widget elementor-widget-radiant-custom-button"
                                                         data-id="c8e0a13" data-element_type="widget"
                                                         data-widget_type="radiant-custom-button.default">
                                                         <div class="elementor-widget-container">
@@ -710,7 +902,7 @@
                                                                         Free Demo</a></div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -742,7 +934,53 @@
                                 </div>
                             </div>
                         </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none"
+                            style="position:absolute; bottom:0; left:0; width:100%; height:120px; display:block;">
+                            <path d="M0,30
+             C360,100 720,20 1080,70
+             C1260,110 1350,90 1440,120
+             L1440,190
+             L0,190 Z" fill="#ffffff"></path>
+                        </svg>
                     </section>
+
+                    <!-- Video Section 1 -->
+                    <section class="video-section">
+                        <div class="smartbooks-video-container">
+                            <div class="video-section-header">
+                                <div class="smartbooks-hover-heading">
+                                    <h2 class="smartbooks-title-heading">See SmartBooks In <span
+                                            class="smartbooks-highlight-txt">Action<span
+                                                class="smartbooks-underline-txt"><svg width="148" height="12"
+                                                    viewBox="0 0 148 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2 10C31.4589 5.57558 103.027 -2.88550 147 7.26552"
+                                                        stroke="url(#paint0_linear_47_987)" stroke-width="4"
+                                                        stroke-linecap="round" />
+                                                    <defs>
+                                                        <linearGradient id="paint0_linear_47_987" x1="2" y1="13.6847"
+                                                            x2="153.199" y2="-0.923732" gradientUnits="userSpaceOnUse">
+                                                            <stop offset="100%" stop-color="#FF7A50" />
+                                                            <stop offset="1" stop-color="#E9C5A4" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                </svg></span></span></h2>
+                                </div>
+                                <p class="video-section-description">
+                                    Watch how SmartBooks transforms learning with interactive features, AI-powered
+                                    tutoring, and engaging multimedia content that works completely offline.
+                                </p>
+                            </div>
+                            <div class="video-wrapper" id="videoWrapper">
+                                <img src="https://img.youtube.com/vi/yiIuISQnrxQ/maxresdefault.jpg"
+                                    alt="SmartBooks Video Thumbnail" class="video-thumbnail" id="videoThumbnail">
+                                <div class="video-overlay" id="videoOverlay">
+                                    <div class="smartbooks-play-button"></div>
+                                </div>
+                                <div class="video-loading smartbooks-video-hidden" id="videoLoading">Loading...</div>
+                            </div>
+                        </div>
+                    </section>
+
                     <section
                         class="elementor-section elementor-top-section elementor-element elementor-element-e957f88 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                         data-id="e957f88" data-element_type="section" id="features">
@@ -1175,7 +1413,7 @@
                                         class="elementor-section elementor-inner-section elementor-element elementor-element-1bad306 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                         data-id="1bad306" data-element_type="section">
                                         <div class="elementor-container elementor-column-gap-default">
-                                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-48f0bef"
+                                            <!-- <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-48f0bef"
                                                 data-id="48f0bef" data-element_type="column">
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-8764ffa elementor-widget elementor-widget-radiant-custom-button"
@@ -1183,25 +1421,28 @@
                                                         data-widget_type="radiant-custom-button.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="radiantthemes-custom-button element-four">
-                                                                <div class="rt-arrow-btn"><a href="contact.html"
+                                                                <div class="rt-arrow-btn"><a href="contact.php"
                                                                         rel="nofollow" class="rt-readmore-btn">Download
                                                                         SmartBooks</a></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-12168bb"
-                                                data-id="12168bb" data-element_type="column">
-                                                <div class="elementor-widget-wrap elementor-element-populated">
-                                                    <div class="elementor-element elementor-element-66d0b1e elementor-widget elementor-widget-radiant-custom-button"
+                                            </div> -->
+                                            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-12168bb"
+                                                data-id="12168bb" data-element_type="column"
+                                                style="display: flex; justify-content: center;">
+                                                <div class="elementor-widget-wrap elementor-element-populated"
+                                                    style="width: 300px;">
+                                                    <div class="elementor-element elementor-element-66d0b1e elementor-widget__width-initial m-0 elementor-widget elementor-widget-radiant-custom-button"
                                                         data-id="66d0b1e" data-element_type="widget"
                                                         data-widget_type="radiant-custom-button.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="radiantthemes-custom-button element-four">
                                                                 <div class="rt-arrow-btn"><a
                                                                         href="smartbooks-modes.html" rel="nofollow"
-                                                                        class="rt-readmore-btn">Start
+                                                                        class="rt-readmore-btn"
+                                                                        style="width: 100%; text-align: center; display: block;">Start
                                                                         Learning</a></div>
                                                             </div>
                                                         </div>
@@ -1750,23 +1991,74 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="elementor-element elementor-element-6ed10f6 elementor-widget__width-initial elementor-hidden-mobile_extra elementor-hidden-mobile elementor-aspect-ratio-169 elementor-widget elementor-widget-video"
-                                        data-id="6ed10f6" data-element_type="widget"
-                                        data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/nfwahEddFuY?si=T5V5FVcsQ8aJe9OD&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;modestbranding&quot;:&quot;yes&quot;,&quot;show_image_overlay&quot;:&quot;yes&quot;,&quot;image_overlay&quot;:{&quot;url&quot;:&quot;images\/Play-Button.png&quot;},&quot;lightbox&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;,&quot;aspect_ratio&quot;:&quot;169&quot;}"
-                                        data-widget_type="video.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-wrapper elementor-open-lightbox">
-                                                <div class="elementor-custom-embed-image-overlay"
-                                                    data-elementor-open-lightbox="yes"
-                                                    data-elementor-lightbox="{&quot;type&quot;:&quot;video&quot;,&quot;videoType&quot;:&quot;youtube&quot;,&quot;url&quot;:&quot;https:\/\/www.youtube.com\/embed\/nfwahEddFuY?feature=oembed&amp;start=0&amp;end=&amp;wmode=opaque&amp;loop=0&amp;controls=1&amp;mute=1&amp;rel=0&amp;modestbranding=1&quot;,&quot;modalOptions&quot;:{&quot;id&quot;:&quot;elementor-lightbox-6ed10f6&quot;,&quot;entranceAnimation&quot;:&quot;&quot;,&quot;videoAspectRatio&quot;:&quot;169&quot;}}">
-                                                    <img data-lazyloaded="1" data-placeholder-resp="184x184"
-                                                        src="images/Play-Button.png" decoding="async" width="184"
-                                                        height="184" class="attachment-full size-full" alt="Play Button"
-                                                        data-sizes="(max-width: 184px) 100vw, 184px" />
-                                                </div>
-                                            </div>
+                                    <div class="video-container" style="width: 80px; height: 80px; margin: 0 auto;"
+                                        id="video-container-1">
+                                        <div id="play-button" style="cursor: pointer; width: 100%; height: 100%;">
+                                            <img src="images/Play-Button.png" alt="Play"
+                                                style="width: 100%; height: 100%; object-fit: contain;">
                                         </div>
                                     </div>
+
+                                    <!-- Video Modal -->
+                                    <div id="video-modal"
+                                        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
+                                        <div
+                                            style="position: relative; width: 90%; max-width: 1000px; height: 80vh; background: #000; border-radius: 8px; overflow: hidden;">
+                                            <button id="close-video"
+                                                style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.5); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; z-index: 1001; display: flex; justify-content: center; align-items: center; font-size: 18px;">×</button>
+                                            <div id="video-player" style="width: 100%; height: 100%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <script>
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                            const playButton = document.getElementById('play-button');
+                                            const videoModal = document.getElementById('video-modal');
+                                            const closeButton = document.getElementById('close-video');
+                                            const videoPlayer = document.getElementById('video-player');
+
+                                            if (!playButton || !videoModal || !closeButton || !videoPlayer) {
+                                                console.error('Required elements not found!');
+                                                return;
+                                            }
+
+                                            function openVideo() {
+                                                const iframe = document.createElement('iframe');
+                                                iframe.setAttribute('src', 'https://www.youtube.com/embed/nfwahEddFuY?autoplay=1&mute=1&modestbranding=1&rel=0');
+                                                iframe.setAttribute('frameborder', '0');
+                                                iframe.setAttribute('allowfullscreen', '');
+                                                iframe.style.width = '100%';
+                                                iframe.style.height = '100%';
+
+                                                // Clear previous iframe if any
+                                                videoPlayer.innerHTML = '';
+                                                videoPlayer.appendChild(iframe);
+                                                videoModal.style.display = 'flex';
+                                                document.body.style.overflow = 'hidden';
+                                            }
+
+                                            function closeVideo() {
+                                                videoModal.style.display = 'none';
+                                                videoPlayer.innerHTML = '';
+                                                document.body.style.overflow = '';
+                                            }
+
+                                            playButton.addEventListener('click', function (e) {
+                                                e.preventDefault();
+                                                e.stopPropagation();
+                                                openVideo();
+                                            });
+
+                                            closeButton.addEventListener('click', closeVideo);
+
+                                            // Close when clicking on the overlay
+                                            videoModal.addEventListener('click', function (e) {
+                                                if (e.target === videoModal) {
+                                                    closeVideo();
+                                                }
+                                            });
+                                        });
+                                    </script>
                                     <div class="elementor-element elementor-element-27da260 elementor-hidden-mobile elementor-widget__width-initial elementor-hidden-mobile_extra elementor-widget elementor-widget-heading"
                                         data-id="27da260" data-element_type="widget" data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
@@ -2506,7 +2798,7 @@
                                                 <div class="elementor-widget-container">
                                                     <ul class="elementor-icon-list-items elementor-inline-items">
                                                         <li class="elementor-icon-list-item elementor-inline-item">
-                                                            <a href="#smartBooksModes"><span
+                                                            <a href="smartbooks-modes.html"><span
                                                                     class="elementor-icon-list-text">SmartBooks
                                                                     Modes</span>
                                                             </a>
@@ -2514,7 +2806,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="elementor-element elementor-element-43f3ed4 elementor-align-left elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                            <!-- <div class="elementor-element elementor-element-43f3ed4 elementor-align-left elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                                 data-id="43f3ed4" data-element_type="widget"
                                                 data-widget_type="icon-list.default">
                                                 <div class="elementor-widget-container">
@@ -2526,7 +2818,7 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="elementor-element elementor-element-2026c90 elementor-align-left elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                                 data-id="2026c90" data-element_type="widget"
                                                 data-widget_type="icon-list.default">
@@ -2546,7 +2838,7 @@
                                                 <div class="elementor-widget-container">
                                                     <ul class="elementor-icon-list-items elementor-inline-items">
                                                         <li class="elementor-icon-list-item elementor-inline-item">
-                                                            <a href="contact.html"><span
+                                                            <a href="contact.php"><span
                                                                     class="elementor-icon-list-text">Contact
                                                                     Us</span>
                                                             </a>
@@ -2802,6 +3094,53 @@
                 };
                 updateCounter();
             });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const videoWrapper = document.getElementById('videoWrapper');
+            const videoOverlay = document.getElementById('videoOverlay');
+            const videoThumbnail = document.getElementById('videoThumbnail');
+            const videoLoading = document.getElementById('videoLoading');
+
+            let isVideoLoaded = false;
+
+            videoOverlay.addEventListener('click', function () {
+                if (!isVideoLoaded) {
+                    // Show loading indicator
+                    videoLoading.classList.remove('smartbooks-video-hidden');
+
+                    // Create and insert the YouTube iframe
+                    const iframe = document.createElement('iframe');
+                    iframe.className = 'video-iframe';
+                    iframe.src = 'https://www.youtube.com/embed/yiIuISQnrxQ?autoplay=1&rel=0&modestbranding=1';
+                    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                    iframe.allowFullscreen = true;
+
+                    // Replace thumbnail with iframe after a short delay
+                    setTimeout(() => {
+                        videoThumbnail.style.display = 'none';
+                        videoOverlay.style.display = 'none';
+                        videoLoading.classList.add('smartbooks-video-hidden');
+                        videoWrapper.appendChild(iframe);
+                        isVideoLoaded = true;
+                    }, 500);
+                }
+            });
+
+            // Add keyboard accessibility
+            videoOverlay.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    videoOverlay.click();
+                }
+            });
+
+            // Make overlay focusable for accessibility
+            videoOverlay.setAttribute('tabindex', '0');
+            videoOverlay.setAttribute('role', 'button');
+            videoOverlay.setAttribute('aria-label', 'Play SmartBooks video');
         });
     </script>
 

@@ -3084,54 +3084,51 @@
                 var r = n(7914);
                 n(59);
                 var i = r(n(9501)), s = r(n(4058)), o = r(n(2821));
-
+    
                 class TextEditor extends o.default {
                     onInit() {
-                        super.onInit(...arguments),
-                            this.setUserSettings()
+                        super.onInit(...arguments);
+                        this.setUserSettings();
                     }
                     getSettings(e) {
                         const t = super.getSettings(e);
-                        return this.setUserSettings(t), t
+                        return this.setUserSettings(t), t;
                     }
                     setUserSettings(e) {
                         this.elements.$backgroundSlideShowContainer &&
-                            "slideshow" === e?.background_background &&
+                            e?.background_background === "slideshow" &&
                             this.elements.$backgroundSlideShowContainer
-                                .data("swiper")?.autoplay.stop()
+                                .data("swiper")?.autoplay.stop();
                     }
                     onElementChange(e) {
-                        "background_background" === e &&
-                            (this.elements.$backgroundSlideShowContainer &&
+                        if (e === "background_background") {
+                            this.elements.$backgroundSlideShowContainer &&
                                 this.elements.$backgroundSlideShowContainer
-                                    .data("swiper")?.autoplay.stop(),
-                                this.runElementsHandlers())
+                                    .data("swiper")?.autoplay.stop();
+                            this.runElementsHandlers();
+                        }
                     }
                     getHandlers() {
                         return {
                             Swiper: o.default,
                             BackgroundVideo: i.default,
                             BackgroundSlideshow: s.default
-                        }
+                        };
                     }
                 }
-
-                // ✅ FIX: wrap the export as a function
-                e.exports = (element) => {
-                    new TextEditor({ $element: element });
-                };
+    
+                // ✅ Export the class itself
+                e.exports = TextEditor;
             }
         }]);
     </script>
-
-
-
+    
     <script>
         function animateCounter(counter) {
             const target = +counter.getAttribute("data-target");
             let count = 0;
-            const step = target / 100; // speed (higher = slower)
-
+            const step = target / 100;
+    
             const updateCounter = () => {
                 count += step;
                 if (count < target) {
@@ -3141,31 +3138,28 @@
                     counter.textContent = target;
                 }
             };
-
+    
             updateCounter();
         }
-
+    
         document.addEventListener("DOMContentLoaded", () => {
             const counterElements = document.querySelectorAll(".counter");
             if (!counterElements.length) return;
-
+    
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting && entry.target instanceof Element) {
+                    if (entry.isIntersecting && entry.target instanceof HTMLElement) {
                         animateCounter(entry.target);
                         observer.unobserve(entry.target);
                     }
                 });
-            }, {
-                threshold: 0.5
-            });
-
+            }, { threshold: 0.5 });
+    
             counterElements.forEach(counter => {
-                if (counter instanceof Element) observer.observe(counter);
+                if (counter instanceof HTMLElement) observer.observe(counter);
             });
         });
     </script>
-
 
 
     <script>

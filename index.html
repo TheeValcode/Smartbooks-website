@@ -1601,8 +1601,9 @@
                                                         data-widget_type="radiant-custom-button.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="radiantthemes-custom-button element-four">
-                                                                <div class="rt-arrow-btn"><a href="smartbooks-modes.html"
-                                                                        rel="nofollow" class="rt-readmore-btn">Discover
+                                                                <div class="rt-arrow-btn"><a
+                                                                        href="smartbooks-modes.html" rel="nofollow"
+                                                                        class="rt-readmore-btn">Discover
                                                                         more</a><svg width="23" height="8"
                                                                         viewBox="0 0 23 8" fill="none"
                                                                         xmlns="http://www.w3.org/2000/svg">
@@ -3083,28 +3084,28 @@
                 var r = n(7914);
                 n(59);
                 var i = r(n(9501)), s = r(n(4058)), o = r(n(2821));
+
                 class TextEditor extends o.default {
                     onInit() {
                         super.onInit(...arguments),
-                        this.setUserSettings()
+                            this.setUserSettings()
                     }
                     getSettings(e) {
                         const t = super.getSettings(e);
-                        return this.setUserSettings(t),
-                        t
+                        return this.setUserSettings(t), t
                     }
                     setUserSettings(e) {
                         this.elements.$backgroundSlideShowContainer &&
-                        "slideshow" === e?.background_background &&
-                        this.elements.$backgroundSlideShowContainer
-                            .data("swiper")?.autoplay.stop()
+                            "slideshow" === e?.background_background &&
+                            this.elements.$backgroundSlideShowContainer
+                                .data("swiper")?.autoplay.stop()
                     }
                     onElementChange(e) {
                         "background_background" === e &&
-                        (this.elements.$backgroundSlideShowContainer &&
-                        this.elements.$backgroundSlideShowContainer
-                            .data("swiper")?.autoplay.stop(),
-                        this.runElementsHandlers())
+                            (this.elements.$backgroundSlideShowContainer &&
+                                this.elements.$backgroundSlideShowContainer
+                                    .data("swiper")?.autoplay.stop(),
+                                this.runElementsHandlers())
                     }
                     getHandlers() {
                         return {
@@ -3114,18 +3115,22 @@
                         }
                     }
                 }
-                e.exports = TextEditor;
 
+                // ✅ FIX: wrap the export as a function
+                e.exports = (element) => {
+                    new TextEditor({ $element: element });
+                };
             }
         }]);
-        </script>
-        
+    </script>
+
+
     <script>
         function animateCounter(counter) {
             const target = +counter.getAttribute("data-target");
             let count = 0;
             const step = target / 100; // speed (higher = slower)
-            
+
             const updateCounter = () => {
                 count += step;
                 if (count < target) {
@@ -3135,33 +3140,31 @@
                     counter.textContent = target;
                 }
             };
-            
+
             updateCounter();
         }
 
         document.addEventListener("DOMContentLoaded", () => {
             const counterElements = document.querySelectorAll(".counter");
-            
-            if (!counterElements.length) return; // Exit if no counters found
-            
-            // Create an Intersection Observer to animate counters when they come into view
+            if (!counterElements.length) return;
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
+                    if (entry.isIntersecting && entry.target instanceof Element) {
                         animateCounter(entry.target);
-                        observer.unobserve(entry.target); // Stop observing once animated
+                        observer.unobserve(entry.target);
                     }
                 });
             }, {
-                threshold: 0.5 // Trigger when 50% of the counter is visible
+                threshold: 0.5
             });
-            
-            // Start observing each counter
+
             counterElements.forEach(counter => {
-                observer.observe(counter);
+                if (counter instanceof Element) observer.observe(counter);
             });
         });
     </script>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {

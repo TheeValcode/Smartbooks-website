@@ -296,7 +296,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                                                     class="rt-header-holder rt-box-holder mobile-logo-column">
                                                                     <div class="logo-holder">
                                                                         <div class="logo"><a
-                                                                                href="https://apptek.radiantthemes.com/"><span
+                                                                                href="https://smartbooks.ng/"><span
                                                                                     class="logo-default"><img
                                                                                         src="images/logo.png" alt="logo"
                                                                                         width="300"
@@ -379,8 +379,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                                                                 href="https://smartbooks.ng/"><span
                                                                                     class="logo-default"><img
                                                                                         src="images/logo.png" alt="logo"
-                                                                                        width="126"
-                                                                                        height="36"></span></a></div>
+                                                                                        width="300"
+                                                                                        height="auto"></span></a></div>
                                                                     </div>
                                                                     <div class="rt-navbar-menu menu-center">
                                                                         <nav

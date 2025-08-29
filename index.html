@@ -431,6 +431,8 @@
     <link rel="icon" href="images/smartbooks_favicon.jpg" sizes="192x192" />
     <link rel="apple-touch-icon" href="images/smartbooks_favicon.jpg" />
     <meta name="msapplication-TileImage" content="images/smartbooks_favicon.jpg" />
+    <link href="chatr.css" rel="stylesheet" />
+
 </head>
 
 <body
@@ -473,7 +475,7 @@
                                                                     class="rt-header-holder rt-box-holder mobile-logo-column">
                                                                     <div class="logo-holder">
                                                                         <div class="logo"><a
-                                                                                href="https://apptek.radiantthemes.com/"><span
+                                                                                href="https://smartbooks.ng/"><span
                                                                                     class="logo-default"><img
                                                                                         src="images/logo.png" alt="logo"
                                                                                         width="300"
@@ -571,8 +573,8 @@
                                                                                 href="https://smartbooks.ng/"><span
                                                                                     class="logo-default"><img
                                                                                         src="images/logo.png" alt="logo"
-                                                                                        width="126"
-                                                                                        height="36"></span></a></div>
+                                                                                        width="300"
+                                                                                        height="auto"></span></a></div>
                                                                     </div>
                                                                     <div class="rt-navbar-menu menu-center">
                                                                         <nav
@@ -2124,7 +2126,7 @@
                                                                     </p>
                                                                 </blockquote>
                                                             </div>
-                                                            <div class="testimonial-title">
+                                                            <!-- <div class="testimonial-title">
                                                                 <div class="testimonial-title-pic"><img
                                                                         data-lazyloaded="1"
                                                                         data-placeholder-resp="150x150"
@@ -2136,7 +2138,7 @@
                                                                         class="title">Mr. Adebayo Folake</span>
                                                                     <p class="designation">Primary School Principal</p>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
                                                         </div>
                                                     </div>
                                                     <div class="testimonial-item swiper-slide">
@@ -3084,7 +3086,7 @@
                 var r = n(7914);
                 n(59);
                 var i = r(n(9501)), s = r(n(4058)), o = r(n(2821));
-    
+
                 class TextEditor extends o.default {
                     onInit() {
                         super.onInit(...arguments);
@@ -3116,19 +3118,19 @@
                         };
                     }
                 }
-    
+
                 // ✅ Export the class itself
                 e.exports = TextEditor;
             }
         }]);
     </script>
-    
+
     <script>
         function animateCounter(counter) {
             const target = +counter.getAttribute("data-target");
             let count = 0;
             const step = target / 100;
-    
+
             const updateCounter = () => {
                 count += step;
                 if (count < target) {
@@ -3138,14 +3140,14 @@
                     counter.textContent = target;
                 }
             };
-    
+
             updateCounter();
         }
-    
+
         document.addEventListener("DOMContentLoaded", () => {
             const counterElements = document.querySelectorAll(".counter");
             if (!counterElements.length) return;
-    
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting && entry.target instanceof HTMLElement) {
@@ -3154,7 +3156,7 @@
                     }
                 });
             }, { threshold: 0.5 });
-    
+
             counterElements.forEach(counter => {
                 if (counter instanceof HTMLElement) observer.observe(counter);
             });
@@ -3228,6 +3230,33 @@
                 document.getElementById('bulk-license').classList.add('active');
             }
         }
+    </script>
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://n8n.ojikutu.net/webhook/19f3b645-65a3-46c1-b422-d12b1ddd6c3c/chat',
+            webhookConfig: {
+                method: 'POST',
+                headers: {}
+            },
+            showWelcomeScreen: false,
+            loadPreviousSession: true,
+            defaultLanguage: 'en',
+            initialMessages: [
+                'Hi there!',
+                'My name is Rejoice. How can I assist you today?'
+            ],
+            i18n: {
+                en: {
+                    title: 'Smartbooks',
+                    subtitle: "Start a chat. We're here to help you 24/7.",
+                    footer: '',
+                    getStarted: 'New Conversation',
+                    inputPlaceholder: 'Type your question..',
+                },
+            },
+        });
     </script>
 </body>
 

@@ -1994,74 +1994,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="video-container" style="width: 80px; height: 80px; margin: 0 auto;"
-                                        id="video-container-1">
-                                        <div id="play-button" style="cursor: pointer; width: 100%; height: 100%;">
-                                            <img src="images/Play-Button.png" alt="Play"
-                                                style="width: 100%; height: 100%; object-fit: contain;">
-                                        </div>
-                                    </div>
-
-                                    <!-- Video Modal -->
-                                    <div id="video-modal"
-                                        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
-                                        <div
-                                            style="position: relative; width: 90%; max-width: 1000px; height: 80vh; background: #000; border-radius: 8px; overflow: hidden;">
-                                            <button id="close-video"
-                                                style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.5); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; z-index: 1001; display: flex; justify-content: center; align-items: center; font-size: 18px;">×</button>
-                                            <div id="video-player" style="width: 100%; height: 100%;"></div>
-                                        </div>
-                                    </div>
-
-                                    <script>
-                                        document.addEventListener('DOMContentLoaded', function () {
-                                            const playButton = document.getElementById('play-button');
-                                            const videoModal = document.getElementById('video-modal');
-                                            const closeButton = document.getElementById('close-video');
-                                            const videoPlayer = document.getElementById('video-player');
-
-                                            if (!playButton || !videoModal || !closeButton || !videoPlayer) {
-                                                console.error('Required elements not found!');
-                                                return;
-                                            }
-
-                                            function openVideo() {
-                                                const iframe = document.createElement('iframe');
-                                                iframe.setAttribute('src', 'https://www.youtube.com/embed/nfwahEddFuY?autoplay=1&mute=1&modestbranding=1&rel=0');
-                                                iframe.setAttribute('frameborder', '0');
-                                                iframe.setAttribute('allowfullscreen', '');
-                                                iframe.style.width = '100%';
-                                                iframe.style.height = '100%';
-
-                                                // Clear previous iframe if any
-                                                videoPlayer.innerHTML = '';
-                                                videoPlayer.appendChild(iframe);
-                                                videoModal.style.display = 'flex';
-                                                document.body.style.overflow = 'hidden';
-                                            }
-
-                                            function closeVideo() {
-                                                videoModal.style.display = 'none';
-                                                videoPlayer.innerHTML = '';
-                                                document.body.style.overflow = '';
-                                            }
-
-                                            playButton.addEventListener('click', function (e) {
-                                                e.preventDefault();
-                                                e.stopPropagation();
-                                                openVideo();
-                                            });
-
-                                            closeButton.addEventListener('click', closeVideo);
-
-                                            // Close when clicking on the overlay
-                                            videoModal.addEventListener('click', function (e) {
-                                                if (e.target === videoModal) {
-                                                    closeVideo();
-                                                }
-                                            });
-                                        });
-                                    </script>
+                                    <a href="https://youtube.com/@smartbooksdigital?si=BhGe4EtDg2IIcF0A" target="_blank" style="display: block; width: 80px; height: 80px; margin: 0 auto;">
+                                        <img src="images/Play-Button.png" alt="Watch Demo"
+                                            style="width: 100%; height: 100%; object-fit: contain; cursor: pointer;">
+                                    </a>
                                     <div class="elementor-element elementor-element-27da260 elementor-hidden-mobile elementor-widget__width-initial elementor-hidden-mobile_extra elementor-widget elementor-widget-heading"
                                         data-id="27da260" data-element_type="widget" data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
@@ -2338,9 +2274,9 @@
                                                         style="width: 100%;">
                                                         <div class="rt-arrow-btn text-center"
                                                             style="width: 100%; text-align: center;"><a
-                                                                href="pricing.html" rel="nofollow"
+                                                                href="download.html" rel="nofollow"
                                                                 class="rt-readmore-btn"
-                                                                style="display: block; width: 100%;">Learn More</a>
+                                                                style="display: block; width: 100%;">Download SmartBooks</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2830,8 +2766,21 @@
                                                 <div class="elementor-widget-container">
                                                     <ul class="elementor-icon-list-items elementor-inline-items">
                                                         <li class="elementor-icon-list-item elementor-inline-item">
-                                                            <a href="#pricing"><span
+                                                            <a href="pricing.html"><span
                                                                     class="elementor-icon-list-text">Pricing</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-2026c90 elementor-align-left elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                data-id="2026c90" data-element_type="widget"
+                                                data-widget_type="icon-list.default">
+                                                <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items elementor-inline-items">
+                                                        <li class="elementor-icon-list-item elementor-inline-item">
+                                                            <a href="download.html"><span
+                                                                    class="elementor-icon-list-text">Download SmartBooks</span>
                                                             </a>
                                                         </li>
                                                     </ul>

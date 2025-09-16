@@ -747,12 +747,12 @@
                                                                 onfocus="this.style.borderColor='#FF7A50'; this.style.boxShadow='0 0 0 3px rgba(255,122,80,0.1)'"
                                                                 onblur="this.style.borderColor='#e9ecef'; this.style.boxShadow='none'">
                                                                 <option value="">-- Select Class --</option>
-                                                                <option value="primary1">Primary 1</option>
-                                                                <option value="primary2">Primary 2</option>
-                                                                <option value="primary3">Primary 3</option>
-                                                                <option value="primary4">Primary 4</option>
-                                                                <option value="primary5">Primary 5</option>
-                                                                <option value="primary6">Primary 6</option>
+                                                                <option value="primary-1">Primary 1</option>
+                                                                <option value="primary-2">Primary 2</option>
+                                                                <option value="primary-3">Primary 3</option>
+                                                                <option value="primary-4">Primary 4</option>
+                                                                <option value="primary-5">Primary 5</option>
+                                                                <option value="primary-6">Primary 6</option>
                                                             </select>
                                                         </div>
 
@@ -834,16 +834,86 @@
                                                                     return;
                                                                 }
 
-                                                                // Define download links for each OS
+                                                                // Define download links for each combination of role, class, and OS
                                                                 const downloadLinks = {
-                                                                    windows: 'https://drive.google.com/drive/folders/1IxppzzL1PsO9HEtUJ2nqeywV2G6pgcDK?usp=drive_link',
-                                                                    android: 'https://drive.google.com/drive/folders/1bYZFBHnDGXptcmKwWzGVLjq7SMPf6Gh8?usp=drive_link',
-                                                                    linux: 'https://drive.google.com/drive/folders/1455JhUcGaeI-UMrbE-qfd444xB_-sgWY?usp=drive_link'
+                                                                    teacher: {
+                                                                        'primary-1': { 
+                                                                            windows: 'https://drive.google.com/file/d/1A3fLUzSgI9lo7GaVDRF1QzGirxiNo7fP/view?usp=drive_link',
+                                                                            android: 'https://drive.google.com/file/d/1GPHJZdML8B9JvdyenToZWR0NJIx0AyGm/view?usp=drive_link',
+                                                                            linux: 'https://drive.google.com/file/d/12KJQCTXzkhNj3HTlSN7-x8VVY_7UkUlD/view?usp=drive_link'
+                                                                        },
+                                                                        'primary-2': { 
+                                                                            windows: 'https://drive.google.com/file/d/1cok6YmsPrw6H6S0pD-LF5oMzdA40Z2Qx/view?usp=drive_link',
+                                                                            android: 'https://drive.google.com/file/d/1b2BwM18AwOsuqoMtn5aQaTr8fRXcSaUr/view?usp=drive_link',
+                                                                            linux: 'https://drive.google.com/file/d/1I_TiH2EJW_UP8j_fyAkkVwNGbzIZTsW9/view?usp=drive_link'
+                                                                        },
+                                                                        'primary-3': { 
+                                                                            windows: 'https://drive.google.com/file/d/15Kh6WIO9oIQ4eP4-Zsx38O5qmqqODh9Z/view?usp=drive_link',
+                                                                            android: 'https://drive.google.com/file/d/1STtU-kE2esqv6RAmUNnj_XcAckGXORPh/view?usp=drive_link',
+                                                                            linux: 'https://drive.google.com/file/d/1bb3LzMnVZ7gbfA-atpVWFC42P_qync0S/view?usp=drive_link'
+                                                                        },
+                                                                        'primary-4': { 
+                                                                            windows: 'https://drive.google.com/file/d/11UZBYEfi2hBXRIiAbpFUhwqqtdHaqThm/view?usp=drive_link',
+                                                                            android: 'https://drive.google.com/file/d/1e_R-FO2sx9yZakGIYLsRy1b-AwFUhd0Q/view?usp=drive_link',
+                                                                            linux: 'https://drive.google.com/file/d/1RbQWUpgtPusz8X79kwgwF59DERF-mtXf/view?usp=drive_link'
+                                                                        },
+                                                                        'primary-5': { 
+                                                                            windows: 'https://drive.google.com/file/d/1nH2_xc6nRwrtfum-H4ObBFRmCSyV_Esh/view?usp=drive_link',
+                                                                            android: 'https://drive.google.com/file/d/1cEGzunrVswtisPcZ7SaAXAU_tNOtvpSw/view?usp=drive_link',
+                                                                            linux: 'https://drive.google.com/file/d/14SmEKUDu2zEQEV0fcrGuihLhVQnd7_2T/view?usp=drive_link'
+                                                                        },
+                                                                        'primary-6': { 
+                                                                            windows: 'https://drive.google.com/file/d/1U1tihs7dUYjzQwHdBEYG_2K3WVxRRY1g/view?usp=drive_link',
+                                                                            android: 'https://drive.google.com/file/d/1XaNDIS_usprJRU8p2eiVXyVCoZELaW0B/view?usp=drive_link',
+                                                                            linux: 'https://drive.google.com/file/d/1zpjtWmmFYe7qvpxcxupOSc9WM5p22f3O/view?usp=drive_link'
+                                                                        }
+                                                                    },
+                                                                    student: {
+                                                                        'primary-1': { 
+                                                                            windows: 'https://drive.google.com/file/d/1vJOYQoVDn9gqBSbEvNqHVEMIThn4efI4/view?usp=drive_link',
+                                                                            android: 'https://drive.google.com/file/d/1GPHJZdML8B9JvdyenToZWR0NJIx0AyGm/view?usp=drive_link',
+                                                                            linux: 'https://drive.google.com/file/d/12KJQCTXzkhNj3HTlSN7-x8VVY_7UkUlD/view?usp=drive_link'
+                                                                        },
+                                                                        'primary-2': { 
+                                                                            windows: 'https://drive.google.com/file/d/1O_nRtZON5FKbyHSNHcK9AeSsRLdmZ-ao/view?usp=drive_link',
+                                                                            android: 'https://drive.google.com/file/d/1b2BwM18AwOsuqoMtn5aQaTr8fRXcSaUr/view?usp=drive_link',
+                                                                            linux: 'https://drive.google.com/file/d/1I_TiH2EJW_UP8j_fyAkkVwNGbzIZTsW9/view?usp=drive_link'
+                                                                        },
+                                                                        'primary-3': { 
+                                                                            windows: 'https://drive.google.com/file/d/1myQAVWZZ9TD5srUTBrcN34BtXNGs7xQi/view?usp=drive_link',
+                                                                            android: 'https://drive.google.com/file/d/1STtU-kE2esqv6RAmUNnj_XcAckGXORPh/view?usp=drive_link',
+                                                                            linux: 'https://drive.google.com/file/d/1bb3LzMnVZ7gbfA-atpVWFC42P_qync0S/view?usp=drive_link'
+                                                                        },
+                                                                        'primary-4': { 
+                                                                            windows: 'https://drive.google.com/file/d/18Q052dUHGZxoYTFurwfv7w055CBUUXNW/view?usp=drive_link',
+                                                                            android: 'https://drive.google.com/file/d/1e_R-FO2sx9yZakGIYLsRy1b-AwFUhd0Q/view?usp=drive_link',
+                                                                            linux: 'https://drive.google.com/file/d/1RbQWUpgtPusz8X79kwgwF59DERF-mtXf/view?usp=drive_link'
+                                                                        },
+                                                                        'primary-5': { 
+                                                                            windows: 'https://drive.google.com/file/d/1t2WcMh0VSbUVue9PvIDaOnsdNzQ8zL0s/view?usp=drive_link',
+                                                                            android: 'https://drive.google.com/file/d/1cEGzunrVswtisPcZ7SaAXAU_tNOtvpSw/view?usp=drive_link',
+                                                                            linux: 'https://drive.google.com/file/d/14SmEKUDu2zEQEV0fcrGuihLhVQnd7_2T/view?usp=drive_link'
+                                                                        },
+                                                                        'primary-6': { 
+                                                                            windows: 'https://drive.google.com/file/d/1UbAhNjqEN_NMrfFTqhuhr_CUDt9ACv8g/view?usp=drive_link',
+                                                                            android: 'https://drive.google.com/file/d/1XaNDIS_usprJRU8p2eiVXyVCoZELaW0B/view?usp=drive_link',
+                                                                            linux: 'https://drive.google.com/file/d/1zpjtWmmFYe7qvpxcxupOSc9WM5p22f3O/view?usp=drive_link'
+                                                                        }
+                                                                    }
                                                                 };
                                                             
-                                                                // Open the appropriate download link in a new tab
-                                                                const downloadUrl = downloadLinks[os.value];
-                                                                window.open(downloadUrl, '_blank');
+                                                                // Get the appropriate download URL based on selections
+                                                                try {
+                                                                    const downloadUrl = downloadLinks[userRole.value][classroom][os.value];
+                                                                    if (!downloadUrl) {
+                                                                        throw new Error('Download not available for the selected combination');
+                                                                    }
+                                                                    // Open the direct download link in a new tab
+                                                                    window.open(downloadUrl, '_blank');
+                                                                } catch (error) {
+                                                                    alert('Download not available for the selected combination. Please try another option.');
+                                                                    console.error('Download error:', error);
+                                                                }
                                                             });
                                                         </script>
 
